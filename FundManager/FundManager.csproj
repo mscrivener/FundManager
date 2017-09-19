@@ -93,5 +93,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FundManager.Logik\FundManager.Logik.csproj">
+      <Project>{03cc1ad3-fa72-4789-bd29-19dd65105e6f}</Project>
+      <Name>FundManager.Logik</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
