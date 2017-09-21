@@ -24,6 +24,15 @@ namespace FundManager
         {
             InitializeComponent();
 
+            string portfolioId = "ABC";
+
+            Logik.PortfolioFundManager manager = new Logik.PortfolioFundManager(new Logik.PortfolioManager(), new Logik.ShareManager(), new Logik.BenchmarkIndexManager());
+            manager.Load(portfolioId);
+
+            PortfolioId.Content = portfolioId;
+            PortfolioCash.Content = manager.GetPortfolioCashPennies();
+            PortfolioTotal.Content = manager.GetTotalPortfolioValue();
+            PortfolioGrid.DataContext = manager.PresentationList;
         }
     }
 }

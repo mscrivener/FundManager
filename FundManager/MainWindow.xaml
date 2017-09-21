@@ -5,8 +5,48 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FundManager"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="525" >
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25" ></ColumnDefinition>
+            <ColumnDefinition ></ColumnDefinition>
+            <ColumnDefinition Width="25"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Column="1" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Content="Data for portfolio:" Grid.Row="0" Grid.Column="0"></Label>
+            <Label Name="PortfolioId" Grid.Row="0" Grid.Column="1"></Label>
+            <Label Content="Cash (pennies):" Grid.Row="1" Grid.Column="0"></Label>
+            <Label Name="PortfolioCash" Grid.Row="1" Grid.Column="1"></Label>
+            <Label Content="Total value (£):" Grid.Row="2" Grid.Column="0"></Label>
+            <Label Name="PortfolioTotal" Grid.Row="2" Grid.Column="1"></Label>
+        </Grid>
         
+        <DataGrid Name="PortfolioGrid" ItemsSource="{Binding}" AutoGenerateColumns="False" Grid.Column="1" Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Share ID" Binding="{Binding ShareId}"/>
+                <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}"/>
+                <DataGridTextColumn Header="Share Price" Binding="{Binding SharePrice}"/>
+                <DataGridTextColumn Header="Share Holding Value" Binding="{Binding HoldingValue}"/>
+                <DataGridTextColumn Header="Benchmark" Binding="{Binding BenchmarkWeight}"/>
+                <DataGridTextColumn Header="Share Weight" Binding="{Binding ShareWeight}"/>
+                <DataGridTextColumn Header="Benchmark less share weight" Binding="{Binding BenchmarkLessShareWeight}"/>
+                <DataGridTextColumn Header="Recommended share move" Binding="{Binding RecommendedShareMove}"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>

@@ -40,7 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BenchmarkIndexManager.cs" />
+    <Compile Include="IBenchmarkIndexManager.cs" />
+    <Compile Include="IPortfolioManager.cs" />
+    <Compile Include="IShareManager.cs" />
+    <Compile Include="PortfolioFundManager.cs" />
+    <Compile Include="PortfolioManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShareManager.cs" />
+    <Compile Include="SharePresentation.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FundManager.Model\FundManager.Model.csproj">
