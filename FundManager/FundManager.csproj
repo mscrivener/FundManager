@@ -98,6 +98,10 @@
       <Project>{03cc1ad3-fa72-4789-bd29-19dd65105e6f}</Project>
       <Name>FundManager.Logik</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FundManager.Model\FundManager.Model.csproj">
+      <Project>{f227647b-9e43-4c1e-b2ed-fe07d77583fc}</Project>
+      <Name>FundManager.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

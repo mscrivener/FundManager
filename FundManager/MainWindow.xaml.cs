@@ -23,6 +23,7 @@ namespace FundManager
         public MainWindow()
         {
             InitializeComponent();
+
         }
     }
 }
